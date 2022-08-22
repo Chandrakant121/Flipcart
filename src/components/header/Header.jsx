@@ -2,6 +2,7 @@ import { AppBar, Toolbar, styled, Link, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import React from 'react'
 import Search from "./Serach"
+import CustomButtons from './CustomButtons';
 //typography === paragrap
 
 const PlusImage = styled('img')({
@@ -47,6 +48,9 @@ const Header = () => {
                     </Box>
                 </Component>
                 <Search />
+                <Box>
+                    <CustomButtons />
+                </Box>
             </Toolbar>
         </StyledHeader>
     )
