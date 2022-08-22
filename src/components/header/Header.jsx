@@ -5,6 +5,10 @@ import Search from "./Serach"
 import CustomButtons from './CustomButtons';
 //typography === paragrap
 
+const CustomButtonWrapper = styled(Box)`
+margin: 0 5% 0 6%;
+`
+
 const PlusImage = styled('img')({
     width: 10,
     height: 10,
@@ -48,9 +52,9 @@ const Header = () => {
                     </Box>
                 </Component>
                 <Search />
-                <Box>
+                <CustomButtonWrapper>
                     <CustomButtons />
-                </Box>
+                </CustomButtonWrapper>
             </Toolbar>
         </StyledHeader>
     )
