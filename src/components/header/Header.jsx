@@ -1,8 +1,8 @@
 import { AppBar, Toolbar, styled, Link, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import React from 'react'
+import Search from "./Serach"
 //typography === paragrap
-
 
 const PlusImage = styled('img')({
     width: 10,
@@ -34,11 +34,11 @@ const Header = () => {
     const subURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png';
     return (
         <StyledHeader>
-            <Toolbar>
+            <Toolbar style={{ minHeight: 55 }} >
                 <Component>
                     <img src={logoURL} alt="err" style={{ width: 75 }} />
                     <Box style={{ display: "flex" }} >
-                        <SubHeading>Explore&nbsp
+                        <SubHeading>Explore&nbsp;
                             <Box component="span" style={{ color: '#FFE500' }}>
                                 Plus
                             </Box>
@@ -46,6 +46,7 @@ const Header = () => {
                         <PlusImage src={subURL} />
                     </Box>
                 </Component>
+                <Search />
             </Toolbar>
         </StyledHeader>
     )
