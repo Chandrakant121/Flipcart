@@ -1,9 +1,15 @@
 import React from 'react'
 import Navbar from './Navrbar'
+import Banner from './Banner'
+// import { Fragment } from 'react'
+// fragment are fast than div
 
 const Home = () => {
     return (
-        <Navbar></Navbar>
+        <>
+            <Navbar />
+            <Banner />
+        </>
     )
 }
 
