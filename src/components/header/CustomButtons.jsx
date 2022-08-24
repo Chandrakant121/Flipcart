@@ -52,14 +52,14 @@ const LoginButton = styled(Button)(({ theme }) => ({
 const CustomButtons = () => {
 
     const [open, setOpen] = useState(false)
-    
-    const openDialgo = () => {
+
+    const openDialog = () => {
         setOpen(true)
     }
 
     return (
         <Wrapper>
-            <LoginButton variant="container" onClick={() => openDialgo()} >Login</LoginButton>
+            <LoginButton variant="container" onClick={() => openDialog()} >Login</LoginButton>
 
             <Typography style={{ marginTop: 3, width: 135, fontSize: 16 }} >Become a Seller</Typography>
             <Typography style={{ marginTop: 3, fontSize: 16 }} >More</Typography>
