@@ -2,16 +2,16 @@ import Header from './components/header/Header';
 import './App.css';
 import Home from "./components/home/Home"
 import Box from '@mui/material/Box';
-// import DataProvider from './context/DataProvider';
+import DataProvider from './context/DataProvider';
 
 function App() {
   return (
-    <div>
+    <DataProvider>
       <Header />
       <Box style={{ marginTop: 54 }} >
         <Home />
       </Box>
-    </div>
+    </DataProvider>
   );
 }
 

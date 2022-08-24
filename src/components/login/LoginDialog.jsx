@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { DataContext } from '../../context/DataProvider'
 import { Dialog, Box, TextField, Button, Typography, styled } from '@mui/material'
 
 import { authenticateSignup } from "../../service/api"
@@ -86,6 +87,7 @@ const LoginDialog = ({ open, setOpen }) => {
 
     const [account, toggleAccount] = useState(accountInitialValues.login)
     const [signup, setSignup] = useState(signupInitialvalues)
+    const { setAccount } = useContext(DataContext)
 
     const handleClose = () => {
         setOpen(false)
@@ -108,7 +110,8 @@ const LoginDialog = ({ open, setOpen }) => {
         // console.log(response)
         if (!response) return
         handleClose()
-        
+        setAccount(signup.firstname)
+
     }
 
 
