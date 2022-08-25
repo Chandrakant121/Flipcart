@@ -3,7 +3,7 @@ import { useState, useContext } from 'react'
 import { DataContext } from '../../context/DataProvider'
 import { Dialog, Box, TextField, Button, Typography, styled } from '@mui/material'
 
-import { authenticateSignup } from "../../service/api"
+import { authenticateSignup, authenticateLogin } from "../../service/api"
 
 const Component = styled(Box)`
 height: 86vh;
@@ -60,6 +60,14 @@ font-weight: 600;
 cursor: pointer;
 `
 
+const Error = styled(Typography)`
+font-size: 10px;
+color: #ff6161;
+line-height: 0;
+margin-top: 10px;
+font-weight: 600;
+`
+
 const accountInitialValues = {
     login: {
         view: "login",
@@ -82,16 +90,24 @@ const signupInitialvalues = {
     phone: ""
 }
 
+const loginInitalValues = {
+    username: "",
+    password: ""
+}
+
 
 const LoginDialog = ({ open, setOpen }) => {
 
     const [account, toggleAccount] = useState(accountInitialValues.login)
     const [signup, setSignup] = useState(signupInitialvalues)
     const { setAccount } = useContext(DataContext)
+    const [login, setLogin] = useState(loginInitalValues)
+    const [error, setError] = useState(false)
 
     const handleClose = () => {
         setOpen(false)
         toggleAccount(accountInitialValues.login)
+        setError(false)
     }
 
     const toggleSignup = () => {
@@ -111,6 +127,22 @@ const LoginDialog = ({ open, setOpen }) => {
         if (!response) return
         handleClose()
         setAccount(signup.firstname)
+    }
+
+    const onValueChange = (e) => {
+        setLogin({ ...login, [e.target.name]: e.target.value })
+    }
+
+    const loginUser = async () => {
+        let res = await authenticateLogin(login)
+        // console.log(res)
+        if (res.status === 200) {
+            handleClose()
+            setAccount(res.data.data.firstname)
+        }
+        else {
+            setError(true)
+        }
 
     }
 
@@ -131,10 +163,11 @@ const LoginDialog = ({ open, setOpen }) => {
                     {
                         account.view === "login" ?
                             <Wrapper>
-                                <TextField variant="standard" label="Enter Email/Mobile Num.." />
-                                <TextField variant="standard" label="Enter Password" />
+                                <TextField variant="standard" onChange={(e) => onValueChange(e)} name='username' label="Enter Username" />
+                                {error && <Error>Please enter valid username or password</Error>}
+                                <TextField variant="standard" onChange={(e) => onValueChange(e)} name='password' label="Enter Password" />
                                 <Text>By continuing, you agree to Flipkart's Terms of use and Privacy Policy. </Text>
-                                <LoginButton>Login</LoginButton>
+                                <LoginButton onClick={() => loginUser()} >Login</LoginButton>
                                 <Typography style={{ textAlign: "center" }} >OR</Typography>
                                 <RequestOTP>Request OTP</RequestOTP>
                                 <CreateAccount onClick={() => toggleSignup()} >New to Flipkart? Create an account</CreateAccount>
