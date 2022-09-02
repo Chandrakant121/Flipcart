@@ -1,4 +1,4 @@
-import Product from "../models/product.schema"
+import Product from "../models/product.schema.js"
 export const getProducts = async (req, res) => {
     try {
         const products = await Product.find({});
