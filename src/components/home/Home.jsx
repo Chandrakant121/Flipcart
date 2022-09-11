@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import { Box, styled } from '@mui/material'
 import { getProducts } from '../../redux/actions/productAction'
 import { useDispatch, useSelector } from 'react-redux'
+import MidSlide from './MidSlide'
 // import { Fragment } from 'react'
 // fragment are fast than div
 
@@ -29,7 +30,7 @@ const Home = () => {
             <Navbar />
             <Component>
                 <Banner />
-                <Slide products={products} title="Deal of the day" timer={true} />
+                <MidSlide products={products} title="Deal of the day" timer={true} />
                 <Slide products={products} title="Discount for you" timer={false} />
             </Component>
 
