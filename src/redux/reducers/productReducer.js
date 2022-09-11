@@ -1,6 +1,6 @@
-import { GET_PRODUCT_SUCCESS, GET_PRODUCT_FAIL } from "../../constants/productConstant"
+import { GET_PRODUCT_SUCCESS, GET_PRODUCT_FAIL } from "../constants/productConstant"
 
-export const getProductsReducer = (state = { product: [] }, action) => {
+export const getProductsReducer = (state = { products: [] }, action) => {
     switch (action.type) {
         case GET_PRODUCT_SUCCESS:
             return { products: action.payload }

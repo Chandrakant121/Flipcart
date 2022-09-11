@@ -1,5 +1,5 @@
 import axios from "axios"
-import { GET_PRODUCT_FAIL, GET_PRODUCT_SUCCESS } from "../../constants/productConstant"
+import { GET_PRODUCT_FAIL, GET_PRODUCT_SUCCESS } from "../constants/productConstant"
 
 const URL = "http://localhost:8800"
 
