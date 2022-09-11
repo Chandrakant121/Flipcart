@@ -7,20 +7,28 @@ const Component = styled(Box)`
 display: flex;
 
 `
-const LeftComponent = styled(Box)`
-width: 82%;
-`
+const LeftComponent = styled(Box)(({ theme }) => ({
+    width: "82%",
+    [theme.breakpoints.down('md')]: {
+        width: "100%"
+    }
+}))
 
-const RightComponent = styled(Box)`
-background: #FFFFFF;
-height: 347px;
-padding: 5px;
-padding-top: 15px;
-margin-top: 10px;
-margin-left: 10px;
-width: 17%;
-text-align: center;
-`
+
+
+const RightComponent = styled(Box)(({ theme }) => ({
+    background: '#FFFFFF',
+    height: "347px",                           // adjusted
+    padding: "5px",
+    paddingTop: "15px",
+    marginTop: "10px",
+    marginLeft: "10px",
+    width: "17%",
+    textAlign: "center",
+    [theme.breakpoints.down('md')]: {
+        display: "none"
+    }
+}))
 
 const MidSlide = ({ products, title, timer }) => {
     const adURL = 'https://rukminim1.flixcart.com/flap/464/708/image/633789f7def60050.jpg?q=70';
