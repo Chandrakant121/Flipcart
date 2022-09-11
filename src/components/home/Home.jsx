@@ -29,7 +29,8 @@ const Home = () => {
             <Navbar />
             <Component>
                 <Banner />
-                <Slide products={products} />
+                <Slide products={products} title="Deal of the day" timer={true} />
+                <Slide products={products} title="Discount for you" timer={false} />
             </Component>
 
         </>
