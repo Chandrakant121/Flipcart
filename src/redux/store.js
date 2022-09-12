@@ -2,13 +2,15 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import { getProductsReducer } from "./reducers/productReducer";
+import { getProductDetailsReducer } from "./reducers/productReducer";
 
 // create stote takes 2 args = reducer, middleware
 //combineReducers => if we have multiple reducers then we use this 
 // we can not pass multiple reducers directly 
 
 const reducer = combineReducers({
-    getProducts: getProductsReducer
+    getProducts: getProductsReducer,
+    getProductDetails: getProductDetailsReducer
 })
 
 const middleware = [thunk]
