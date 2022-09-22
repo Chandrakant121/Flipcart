@@ -16,6 +16,8 @@ display: flex;
 `
 
 const RightContainer = styled(Grid)`
+/* margin-left: 2px; */
+padding-left:120px;
 margin-top: 50px;
 `
 
