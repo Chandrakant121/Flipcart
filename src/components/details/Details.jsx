@@ -11,14 +11,18 @@ const Component = styled(Box)`
  background: #F2F2F2;
  margin-top: 55px;
 `
-const Container = styled(Grid)`
-background: #FFFFFF;
-display: flex;
-`
+
+const Container = styled(Grid)(({ theme }) => ({
+    background: "#FFFFFF",
+    display: "flex",
+    [theme.breakpoints.down('md')]: {
+        margin: 0
+    }
+}))
 
 const RightContainer = styled(Grid)`
 /* margin-left: 2px; */
-padding-left:120px;
+padding-left: 120px;
 margin-top: 50px;
 `
 

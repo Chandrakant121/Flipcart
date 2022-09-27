@@ -16,6 +16,7 @@ const Column = styled(TableRow)`
     vertical-align: baseline;
     & > td {
         font-size: 14px;
+        border: none;
         margin-top: 10px;
     }
 `
