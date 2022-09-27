@@ -6,9 +6,12 @@ import CustomButtons from './CustomButtons';
 import { Link } from 'react-router-dom';
 //typography === paragrap
 
-const CustomButtonWrapper = styled(Box)`
-margin: 0 5% 0 6%;
-`
+const CustomButtonWrapper = styled('span')(({ theme }) => ({ 
+    margin: '0 5% 0 6%', 
+    [theme.breakpoints.down('sm')]: {
+        display: 'none'
+    }
+}));
 
 const PlusImage = styled('img')({
     width: 10,
