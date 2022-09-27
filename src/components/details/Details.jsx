@@ -27,31 +27,24 @@ const Details = () => {
     const dispatch = useDispatch()
     const { id } = useParams()
     // console.log({ id }) 
-
     const { loading, product } = useSelector(state => state.getProductDetails)
-
     useEffect(() => {
         if (product && id !== product.id) {
             dispatch(getProductDetails(id))
         }
     }, [dispatch, id, product, loading])
-
     // console.log(product)
-
     return (
         <Component>
             {
                 product && Object.keys(product).length &&
                 <Container container>
-
                     <Grid item lg={4} md={4} sm={8} xs={12}>
                         <ActionItems product={product} />
                     </Grid>
-
                     <RightContainer item lg={8} md={8} sm={8} xs={12}>
                         <ProductDetail product={product} />
                     </RightContainer>
-
                 </Container>
             }
         </Component>
