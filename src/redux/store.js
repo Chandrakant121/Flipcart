@@ -3,6 +3,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import { getProductsReducer } from "./reducers/productReducer";
 import { getProductDetailsReducer } from "./reducers/productReducer";
+import { cartReducer } from "./reducers/cartReducer"
 
 // create stote takes 2 args = reducer, middleware
 //combineReducers => if we have multiple reducers then we use this 
@@ -10,7 +11,8 @@ import { getProductDetailsReducer } from "./reducers/productReducer";
 
 const reducer = combineReducers({
     getProducts: getProductsReducer,
-    getProductDetails: getProductDetailsReducer
+    getProductDetails: getProductDetailsReducer,
+    cart: cartReducer
 })
 
 const middleware = [thunk]
