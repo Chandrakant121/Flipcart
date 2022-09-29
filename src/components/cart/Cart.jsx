@@ -49,10 +49,11 @@ const Cart = () => {
     const { cartItems } = cartDetails;
     const { id } = useParams();
     const dispatch = useDispatch();
+
     useEffect(() => {
         if (cartItems && id !== cartItems.id)
             dispatch(addToCart(id));
-        console.log(cartItems);
+        // console.log(cartItems);
     }, [dispatch, cartItems, id]);
 
 
