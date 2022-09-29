@@ -6,6 +6,7 @@ import { DataContext } from '../../context/DataProvider';
 
 import LoginDialog from '../login/LoginDialog';
 import Profile from './Profile';
+import { Link } from 'react-router-dom';
 
 
 const Wrapper = styled(Box)(({ theme }) => ({
@@ -31,7 +32,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
     }
 }));
 
-const Container = styled(Box)`
+const Container = styled(Link)`
 display: flex;
 `
 
@@ -68,12 +69,10 @@ const CustomButtons = () => {
                     <LoginButton variant="container" onClick={() => openDialog()} >Login</LoginButton>
             }
 
-
-
             <Typography style={{ marginTop: 3, width: 135, fontSize: 16 }} >Become a Seller</Typography>
             <Typography style={{ marginTop: 3, fontSize: 16 }} >More</Typography>
 
-            <Container>
+            <Container to="/cart">
                 <ShoppingCart />
                 <Typography>Cart</Typography>
             </Container>
