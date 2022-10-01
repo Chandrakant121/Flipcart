@@ -1,7 +1,7 @@
 import axios from "axios"
 import { ADD_TO_CART, ADD_TO_CART_ERROR, REMOVE_FROM_CART } from "../constants/cartConstatnt";
 
-const URL = "http://localhost:8800"
+const URL = "https://flipcartapp121.herokuapp.com"
 export const addToCart = (id, quantity) => async (dispatch) => {
     try {
         const { data } = await axios.get(`${URL}/product/${id}`);
