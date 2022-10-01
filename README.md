@@ -39,7 +39,7 @@
 
 
 
-<h3 align="center"><a href="https://flipcart.vercel.app/"><strong>Want to see live preview »</strong></a></h3>
+<h3 align="center"><a href="https://flipkartchandu.vercel.app/"><strong>Want to see live preview »</strong></a></h3>
 
 <p align="center">
   <br />&#10023;
@@ -80,7 +80,7 @@ Flipkart Clone is MERN Stack e-commerce web application that allows you to buy p
 
 <br />
 
-## Glimpses of Nike-Clone 🙈 :
+## Glimpses of Flipkart-Clone 🙈 :
 
 
 <table>
@@ -137,13 +137,13 @@ The project repository can be found in [GitHub link](https://github.com/Chandrak
 ```
 Using HTTPS
 
-# git clone https://github.com/Chandrakant121/Flipcart.git
+# git clone https://github.com/Chandrakant121/Flipkart.git
 ```
 
 + Open terminal on your workspace with
 
 ```
-cd /home/workspace/Flipcart-Clone
+cd /home/workspace/Flipkart-Clone
 ```
 
 
