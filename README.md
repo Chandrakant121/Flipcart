@@ -50,7 +50,7 @@
 </p>
 
 
-Flipcart Clone is MERN Stack e-commerce web application that allows you to buy products online. It has a variety of categories, just visit the product listing page and you will see all the products, you can buy any products from the website. This project is just for educational purpose.
+Flipkart Clone is MERN Stack e-commerce web application that allows you to buy products online. It has a variety of categories, just visit the product listing page and you will see all the products, you can buy any products from the website. This project is just for educational purpose.
 
 
 <img width="927" alt="flipcarthomepage" src="https://user-images.githubusercontent.com/90402894/193405247-da4d17eb-9ae4-4e0b-b1b3-56abd6f00335.png">
@@ -75,7 +75,7 @@ Flipcart Clone is MERN Stack e-commerce web application that allows you to buy p
 - Cart Add and Remove Items 
 - Cart Update Quantities 
 - Total Price with discount
-- Searching Product
+- Searching for a Product
 - Responsive 
 
 <br />
@@ -85,7 +85,7 @@ Flipcart Clone is MERN Stack e-commerce web application that allows you to buy p
 
 <table>
   <tr>
-    <td><img width="927" alt="flipcarthomepage" src="https://user-images.githubusercontent.com/90402894/193405247-da4d17eb-9ae4-4e0b-b1b3-56abd6f00335.png"></td>
+    <td><img width="927" alt="flipkarthomepage" src="https://user-images.githubusercontent.com/90402894/193405247-da4d17eb-9ae4-4e0b-b1b3-56abd6f00335.png"></td>
     <td><img width="941" alt="productpage" src="https://user-images.githubusercontent.com/90402894/193405453-e0e08ed4-9326-4265-af47-554d62439175.png"></td>
   </tr>
   
