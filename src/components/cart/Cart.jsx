@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import CartItem from './CartItem'
 import Totalview from './Totalview'
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/actions/cartAction';
@@ -47,7 +48,9 @@ margin-left: 10px;
 const Cart = () => {
     const cartDetails = useSelector(state => state.cart);
     const { cartItems } = cartDetails;
+    const navigate = useNavigate()
     const { id } = useParams();
+    let token = JSON.parse(localStorage.getItem("token"));
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -56,6 +59,15 @@ const Cart = () => {
         // console.log(cartItems);
     }, [dispatch, cartItems, id]);
 
+    const checklogin = () => {
+        if (token) {
+            navigate("/payment")
+        }
+        else {
+            alert("Login Or Register with us")
+            // navigate("/")
+        }
+    }
 
     return (
         <>
@@ -72,7 +84,7 @@ const Cart = () => {
                                 })
                             }
                             <PlaceBtn>
-                                <StledButton>Place Order</StledButton>
+                                <StledButton onClick={() => checklogin()} >Place Order</StledButton>
                             </PlaceBtn>
                         </LeftComponent>
 

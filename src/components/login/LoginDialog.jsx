@@ -5,6 +5,7 @@ import { Dialog, Box, TextField, Button, Typography, styled } from '@mui/materia
 
 import { authenticateSignup, authenticateLogin } from "../../service/api"
 
+
 const Component = styled(Box)`
 height: 86vh;
 width: 100vh;
@@ -135,10 +136,13 @@ const LoginDialog = ({ open, setOpen }) => {
 
     const loginUser = async () => {
         let res = await authenticateLogin(login)
-        // console.log(res)
+        let token = res.data.token
+        // console.log(token)
         if (res.status === 200) {
+            localStorage.setItem("token", JSON.stringify(token))
             handleClose()
             setAccount(res.data.data.firstname)
+            alert("Login to user Account")
         }
         else {
             setError(true)

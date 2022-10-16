@@ -29,9 +29,20 @@ const ActionItems = ({ product }) => {
     const dispatch = useDispatch()
     const { id } = product
 
+    let token = JSON.parse(localStorage.getItem("token"));
+
     const addItemToCart = () => {
-        dispatch(addToCart(id,quantity))
+        dispatch(addToCart(id, quantity))
         navigate("/cart")
+    }
+    const checklogin = () => {
+        if (token) {
+            navigate("/payment")
+        }
+        else {
+            alert("Login Or Register with us")
+            navigate("/")
+        }
     }
 
     return (
@@ -44,7 +55,7 @@ const ActionItems = ({ product }) => {
                 <Image src={product.detailUrl} alt="product"></Image>
             </Box>
             <StyledButton variant="contained" onClick={() => addItemToCart()} style={{ marginRight: 10, background: '#ff9f00' }} > <ShoppingCartIcon />Add to Cart</StyledButton>
-            <StyledButton variant="contained" style={{ background: "#fb541b" }}><FlashOnIcon />Buy Now</StyledButton>
+            <StyledButton variant="contained" onClick={() => checklogin()} style={{ background: "#fb541b" }}><FlashOnIcon />Buy Now</StyledButton>
         </LeftContainer>
     )
 }
