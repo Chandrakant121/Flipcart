@@ -61,7 +61,8 @@ const Cart = () => {
 
     const checklogin = () => {
         if (token) {
-            navigate("/payment")
+            // navigate("/payment")
+            alert ("payment page in process")
         }
         else {
             alert("Login Or Register with us")

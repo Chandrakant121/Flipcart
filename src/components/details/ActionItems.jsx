@@ -37,7 +37,8 @@ const ActionItems = ({ product }) => {
     }
     const checklogin = () => {
         if (token) {
-            navigate("/payment")
+            // navigate("/payment")
+            alert("Page is in process")
         }
         else {
             alert("Login Or Register with us")
