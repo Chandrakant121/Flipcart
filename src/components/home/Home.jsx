@@ -31,9 +31,11 @@ const Home = () => {
             <Navbar />
             <Component>
                 <Banner />
-                <MidSlide products={products} title="Deal of the day" timer={true} />
-                <MidSection/>
-                <Slide products={products} title="Discount for you" timer={false} />
+                <MidSlide products={products.slice(8, 14)} title="Mens Section" timer={true} />
+                {/* use slice */}
+                <Slide products={products.slice(15, 22)} title="Womens Section" timer={false} />
+                <Slide products={products.slice(0, 7)} title="Deal of the day" timer={false} />
+                <MidSection />
             </Component>
 
         </>

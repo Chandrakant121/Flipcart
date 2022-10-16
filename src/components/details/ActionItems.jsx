@@ -13,7 +13,7 @@ padding: 40px 0 0 80px;
 `
 
 const Image = styled('img')({
-    // width: "95%",
+    width: "95%",
     padding: "15px"
 })
 
