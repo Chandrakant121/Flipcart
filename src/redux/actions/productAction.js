@@ -1,8 +1,8 @@
 import axios from "axios"
 import { GET_PRODUCT_DETAILS_FAIL, GET_PRODUCT_DETAILS_REQUEST, GET_PRODUCT_DETAILS_SUCCESS, GET_PRODUCT_FAIL, GET_PRODUCT_SUCCESS } from "../constants/productConstant"
 
-// const URL = "https://flipcartapp121.herokuapp.com"
-const URL = 'http://localhost:5000';
+const URL = "https://flipcartapp121.herokuapp.com"
+// const URL = 'http://localhost:5000';
 
 export const getProducts = () => async (dispatch) => {
     try {
