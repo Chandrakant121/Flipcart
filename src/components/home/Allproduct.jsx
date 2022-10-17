@@ -8,14 +8,16 @@ import { Link } from 'react-router-dom'
 import { Typography } from '@mui/material'
 
 const Container = styled(Box)`
-display: grid;
-grid-template-columns: repeat(3,20%);
-grid-gap: 40px;
-/* border: 10px solid yellow; */
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+row-gap: 30px;
+column-gap: 10px;
 margin: auto;
 justify-content: space-around;
 padding: 20px;
 `
+
 const Text = styled(Typography)`
 font-size: 14px;
 margin-top: 5px;
@@ -25,6 +27,8 @@ const SubContainer = styled(Box)`
 align-items: center;
 display: block;
 text-align: center;
+height: 380px;
+width: 280px;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 padding: 10px;`
 
@@ -37,12 +41,12 @@ object-fit: cover;
 
 `
 
-const ShortTitle = styled(Box)`
-font-size: 16px;
-/* padding: 8px; */
-margin-top: 4px;
-font-weight: bold;
-`
+// const ShortTitle = styled(Box)`
+// font-size: 16px;
+// /* padding: 8px; */
+// margin-top: 4px;
+// font-weight: bold;
+// `
 
 const Allproduct = () => {
 
