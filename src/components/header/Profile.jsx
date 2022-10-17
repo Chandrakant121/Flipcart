@@ -25,7 +25,8 @@ const Profile = ({ account, setAccount }) => {
     const logoutuser = () => {
         setAccount("")
         localStorage.clear("token");
-        navigate("/login")
+        alert("Logout Successfully")
+        navigate("/")
     }
 
     return (
