@@ -61,15 +61,19 @@ Flipkart Clone is MERN Stack e-commerce web application that allows you to buy p
 
 ## Screens ( All screens are responsive)
 - Homepage / Landing Page
+- Products Page
 - Product Page
 - Product Description Page
-- Cart Page
 - Login / Logout Page
 - Signup Page
+- Cart Page
+
 <br />
 
 
 ## 🚀 Features
+- JWT Authentication
+- Bcrypt, Password Hashing
 - Login User Account
 - Signup User Account
 - Cart Add and Remove Items 
