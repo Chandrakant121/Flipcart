@@ -1,6 +1,6 @@
 import axios from "axios";
 // const URL = "https://flipcartapp121.herokuapp.com"
-const URL = "https://chanduwebcloneflipcart.herokuapp.com"
+const URL = "https://bead-handy-protoceratops.glitch.me"
 // const URL = 'http://localhost:5000';
 
 export const authenticateSignup = async (data) => {
